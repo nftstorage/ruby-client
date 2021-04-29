@@ -17,7 +17,6 @@ docs/Links.md
 docs/LinksFile.md
 docs/ListResponse.md
 docs/NFT.md
-docs/NFTDeals.md
 docs/NFTStorageAPI.md
 docs/Pin.md
 docs/PinStatus.md
@@ -41,7 +40,6 @@ lib/nft_storage/models/links.rb
 lib/nft_storage/models/links_file.rb
 lib/nft_storage/models/list_response.rb
 lib/nft_storage/models/nft.rb
-lib/nft_storage/models/nft_deals.rb
 lib/nft_storage/models/pin.rb
 lib/nft_storage/models/pin_status.rb
 lib/nft_storage/models/unauthorized_error_response.rb
@@ -62,7 +60,6 @@ spec/models/get_response_spec.rb
 spec/models/links_file_spec.rb
 spec/models/links_spec.rb
 spec/models/list_response_spec.rb
-spec/models/nft_deals_spec.rb
 spec/models/nft_spec.rb
 spec/models/pin_spec.rb
 spec/models/pin_status_spec.rb

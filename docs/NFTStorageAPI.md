@@ -1,6 +1,6 @@
 # NFTStorage::NFTStorageAPI
 
-All URIs are relative to *https://nft.storage/api*
+All URIs are relative to *https://api.nft.storage*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -81,7 +81,7 @@ end
 
 ## list
 
-> <ListResponse> list
+> <ListResponse> list(opts)
 
 List all stored files
 
@@ -97,10 +97,14 @@ NFTStorage.configure do |config|
 end
 
 api_instance = NFTStorage::NFTStorageAPI.new
+opts = {
+  before: Time.parse('2020-07-27T17:32:28Z'), # Time | Return results created before provided timestamp
+  limit: 56 # Integer | Max records to return
+}
 
 begin
   # List all stored files
-  result = api_instance.list
+  result = api_instance.list(opts)
   p result
 rescue NFTStorage::ApiError => e
   puts "Error when calling NFTStorageAPI->list: #{e}"
@@ -111,12 +115,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListResponse>, Integer, Hash)> list_with_http_info
+> <Array(<ListResponse>, Integer, Hash)> list_with_http_info(opts)
 
 ```ruby
 begin
   # List all stored files
-  data, status_code, headers = api_instance.list_with_http_info
+  data, status_code, headers = api_instance.list_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListResponse>
@@ -127,7 +131,10 @@ end
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **before** | **Time** | Return results created before provided timestamp | [optional] |
+| **limit** | **Integer** | Max records to return | [optional][default to 10] |
 
 ### Return type
 

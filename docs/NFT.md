@@ -11,7 +11,7 @@
 | **scope** | **String** | Name of the JWT token used to create this NFT. | [optional][default to &#39;default&#39;] |
 | **pin** | [**Pin**](Pin.md) |  | [optional] |
 | **files** | **Array&lt;Object&gt;** | Files in the directory (only if this NFT is a directory). | [optional] |
-| **deals** | [**NFTDeals**](NFTDeals.md) |  | [optional] |
+| **deals** | [**Array&lt;Deal&gt;**](Deal.md) |  | [optional] |
 
 ## Example
 
